@@ -1,0 +1,172 @@
+body {
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, rgb(255, 105, 180), rgb(0, 204, 255));
+  transition: background 0.5s ease;
+}
+
+h1 {
+  margin-top: 12px;
+  font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.logo {
+  display: block;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+}
+
+.container {
+  max-width: 955px;
+  border: 2px solid black;
+  margin: auto;
+  height: 60vh;
+  padding: 33px;
+  overflow-y: auto;
+  margin-bottom: 23px;
+  border-radius: 13px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.75s ease;
+}
+
+.message {
+  background-color: rgb(216, 209, 209);
+  width: fit-content;
+  max-width: 80%; /* Limit the width of the bubble */
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: 2px solid black;
+  border-radius: 20px; /* Rounded corners for bubble effect */
+  position: relative; /* Needed for positioning the triangle */
+  transition: transform 0.3s;
+}
+
+.message.left {
+  background-color: rgb(173, 216, 230); /* Light blue for left messages */
+  margin-right: auto; /* Align to the left */
+}
+
+.message.right {
+  background-color: rgb(255, 203, 203); /* Light pink for right messages */
+  margin-left: auto; /* Align to the right */
+}
+
+.message:hover {
+  transform: scale(1.05);
+}
+
+.left {
+  float: left;
+  clear: both;
+}
+
+.right {
+  float: right;
+  clear: both;
+}
+
+#messageInp {
+  width: 80%;
+  border: 2px solid black;
+  border-radius: 6px;
+  height: 34px;
+  font-size: 22px;
+  font-family: cursive;
+  padding: 5px;
+  transition: border-color 0.3s;
+}
+
+#messageInp:focus {
+  border-color: rgb(109, 39, 239);
+  outline: none;
+}
+
+#send-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1085px;
+  width: 100%;
+  margin: auto;
+}
+
+.btn {
+  margin: 0 5px;
+  height: 34px;
+  width: 8%;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 6px; 
+  background-color: rgb(109, 39, 239);
+  color: white;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: rgb(85, 29, 189);
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+/* For devices with a max width of 768px (tablets) */
+@media (max-width: 768px) {
+  body {
+    padding: 10px; /* Add padding for smaller screens */
+  }
+
+  h1 {
+    font-size: 24px; /* Decrease font size */
+  }
+
+  .container {
+    max-width: 100%; /* Full width on smaller screens */
+    height: auto; /* Adjust height */
+    padding: 20px; /* Reduce padding */
+  }
+
+  #messageInp {
+    width: 100%; /* Full width for input */
+    height: 40px; /* Increase height for easier typing */
+  }
+
+  .btn {
+    width: 25%; /* Adjust button size */
+    height: 40px; /* Increase button height */
+  }
+}
+
+/* For devices with a max width of 480px (mobile phones) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px; /* Further decrease font size */
+  }
+
+  .container {
+    padding: 15px; /* Further reduce padding */
+  }
+
+  .message {
+    max-width: 95%; /* Allow messages to be wider */
+  }
+
+  #send-container {
+    flex-direction: column; /* Stack buttons */
+  }
+
+  .btn {
+    width: 100%; /* Full width buttons */
+    margin: 5px 0; /* Margin for spacing */
+  }
+}

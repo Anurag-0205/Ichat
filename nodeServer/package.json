@@ -1,0 +1,23 @@
+{
+  "name": "nodeserver",
+  "version": "1.0.0",
+  "description": "This is a node server for our Ichat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anurag-0205/Ichat.git"
+  },
+  "author": "Anurag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anurag-0205/Ichat/issues"
+  },
+  "homepage": "https://github.com/Anurag-0205/Ichat#readme",
+  "dependencies": {
+    "nodemon": "^3.1.9",
+    "socket.io": "^4.8.1"
+  }
+}
